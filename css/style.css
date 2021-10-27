@@ -1,0 +1,256 @@
+/* Style
+---------------------------------------*/
+/*
+1) @import.
+2) Header.
+3) Advertisement.
+4) Companies.
+5) Preferences.
+6) Impuls.
+7) Watched.
+8) Popular-categories.
+9) Social.
+10) Footer.
+*/
+/* 1) @import
+-------------------------*/
+/* Variables
+---------------------------------------*/
+/* User Mixins 
+---------------------------------------*/
+/*
+text-align: center; выравнивание все inline-элементов
+vertical-align: center; выравнивание inline элементов внутри строки, 
+должно быть несколько inline-элементов.
+*/
+/*width is known*/
+/*Центрирование инлайнов внутри блоков, значения задать родителю. 
+			font-size: 78px;
+			line-height: 119px;
+*/
+/*Parent's height is set by line-height
+Child is inline or inline-block, vertical-align: middle*/
+.clearfix::after {
+  /*not a mixin*/
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Headings
+---------------------------------------*/
+h1 {
+  font-size: 65px;
+  line-height: 70px;
+  font-weight: 600;
+  color: #000;
+}
+h2 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+  color: #000;
+}
+/* Body
+---------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Graphik LCG', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000;
+  background-color: #fff;
+}
+/* =Buttons
+---------------------------------------*/
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.button {
+  display: block;
+  background-color: #fff;
+  height: 60px;
+  font-size: 16px;
+  min-width: 120px;
+  font-weight: 600;
+  text-align: center;
+}
+.button-orange {
+  background-color: #FF6336;
+  color: #fff;
+  border: 1px solid #FF6336;
+}
+.button-white {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+/* Graphics
+---------------------------------------*/
+.underline {
+  text-decoration: underline;
+}
+/* =Links
+---------------------------------------*/
+a {
+  /* outline: none; */
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  /* outline: none;  */
+  text-decoration: none;
+  cursor: pointer;
+}
+/*2) Header*/
+.main-header__wrap {
+  width: 1338px;
+  margin: 0 auto;
+  padding: 25px 0 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.main-header__logo {
+  margin-right: 51px;
+}
+.main-header__nav {
+  margin-right: auto;
+}
+.main-header__item {
+  display: inline-block;
+}
+.main-header__item:first-child,
+.main-header__item:nth-child(2) {
+  margin-right: 57px;
+}
+.main-header__item:nth-child(3) {
+  margin-right: 42px;
+}
+.main-header__item:nth-child(4) {
+  margin-right: 49px;
+}
+.main-header__link {
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+}
+.main-header__login {
+  margin-left: 10px;
+  padding: 15px;
+  text-align: center;
+}
+/*3) Advertisement*/
+.advertisement__wrap {
+  width: 1290px;
+  padding: 129px 0 172px;
+  margin: 0 auto;
+  display: flex;
+}
+.advertisement__title {
+  width: 539px;
+  margin-bottom: 51px;
+}
+.advertisement__description {
+  width: 520px;
+  font-size: 25px;
+  line-height: 35px;
+  margin-bottom: 51px;
+}
+.advertisement__button {
+  display: inline-block;
+  min-width: 160px;
+  padding: 16px;
+}
+.advertisement__button:first-child {
+  margin-right: 10px;
+}
+.advertisement__extra {
+  margin-top: 25px;
+  font-size: 15px;
+  line-height: 25px;
+}
+/* 4) Companies*/
+.companies {
+  background-color: #FF9C7D;
+}
+.companies__wrap {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 104px 0 104px;
+}
+.companies__title {
+  text-align: center;
+  width: 720px;
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
+.companies__img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/*5) Preferences*/
+.preferences__wrap {
+  width: 1290px;
+  margin: 0 auto;
+  padding: 90px 0 150px;
+  display: flex;
+  flex-direction: column;
+}
+.preferences__item {
+  margin-bottom: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.preferences__item:last-child {
+  margin-bottom: 0;
+}
+.preferences__text {
+  margin-bottom: 30px;
+}
+.preferences__link {
+  font-weight: 600;
+}
+.preferences__title {
+  margin-top: 151px;
+  margin-bottom: 30px;
+}
+.preferences__item:first-child .preferences__description {
+  width: 493px;
+}
+.preferences__item:nth-child(2) .preferences__description {
+  width: 450px;
+  margin-right: 70px;
+}
+.preferences__item:nth-child(2) .preferences__title {
+  width: 379px;
+}
+.preferences__item:nth-child(3) .preferences__description {
+  width: 520px;
+}
+.preferences__item:nth-child(4) .preferences__description {
+  width: 520px;
+}
+.preferences__item:nth-child(4) .preferences__title {
+  margin-top: 123px;
+}
+.preferences__figure-code {
+  width: 632px;
+  height: 577px;
+  padding: 119px 66px 158px;
+  background-color: #FFF8E4;
+}
+.preferences__php {
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 67px;
+  margin-top: 10px;
+}

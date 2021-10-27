@@ -1,0 +1,182 @@
+/* Style
+---------------------------------------*/
+/*
+1) @import.
+2) Header.
+3) Advertisement.
+4) Companies.
+5) Preferences.
+6) Impuls.
+7) Watched.
+8) Popular-categories.
+9) Social.
+10) Footer.
+*/
+
+/* 1) @import
+-------------------------*/
+@import url("_variables.less");
+@import url("_mixins.less");
+@import url("_headings.less");
+@import url("_body.less");
+@import url("_buttons.less");
+@import url("_graphics.less");
+@import url("_links.less");
+
+/*2) Header*/
+.main-header{
+    &__wrap{
+        width: 1338px;
+        .center-block();
+        .main-paddings(25px, 0, 25px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__logo{
+        margin-right: 51px;
+    }
+    &__nav{
+        margin-right: auto;
+    }
+    &__item{
+        display: inline-block;
+    }
+    &__item:first-child, &__item:nth-child(2){
+        margin-right: 57px;
+    }
+    &__item:nth-child(3){
+        margin-right: 42px;
+    }
+    &__item:nth-child(4){
+        margin-right: 49px;
+    }
+    &__link{
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &__login{
+        margin-left: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+}
+/*3) Advertisement*/
+.advertisement{
+    &__wrap{
+        width: 1290px;
+        .main-paddings(129px, 0, 172px);
+        .center-block();
+        display: flex;
+    }
+    &__block-left{
+
+    }
+    &__block-right{
+
+    }
+    &__title{
+        width: 539px;
+        margin-bottom: 51px;
+    }
+    &__description{
+        width: 520px;
+        font-size: 25px;
+        line-height: 35px;
+        margin-bottom: 51px;
+    }
+    &__button{
+        display: inline-block;
+        min-width: 160px;
+        padding: 16px;
+    }
+    &__button:first-child{
+        margin-right: 10px;
+    }
+    &__extra{
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+/* 4) Companies*/
+.companies{
+    background-color: @orange-dark;
+    &__wrap{
+        width: 1240px;
+        .center-block();
+        .main-paddings(104px, 0, 104px);
+    }
+    &__title{
+        text-align: center;
+        width: 720px;
+        .center-block();
+        margin-bottom: 65px;
+    }
+    &__img{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/*5) Preferences*/
+.preferences{
+    &__wrap{
+        width: 1290px;
+        .center-block();
+        .main-paddings(90px, 0, 150px);
+        display: flex;   
+        flex-direction: column;     
+    }
+    &__item{
+        margin-bottom: 250px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item:last-child{
+        margin-bottom: 0;
+    }
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__link{
+        font-weight: 600;
+    }
+    &__title{
+        margin-top: 151px;
+        margin-bottom: 30px;
+    }
+    &__item:first-child &__description{
+        width: 493px;
+    }
+    &__item:nth-child(2) &__description{
+        width: 450px;
+        margin-right: 70px;
+    }
+    &__item:nth-child(2) &__title{
+        width: 379px;
+    }
+    &__item:nth-child(3) &__description{
+        width: 520px;
+    }
+    &__item:nth-child(4) &__description{
+        width: 520px;
+    }
+    &__item:nth-child(4) &__title{
+        margin-top: 123px;
+    }
+    &__figure-code{
+        width: 632px;
+        height: 577px;
+        padding: 119px 66px 158px;
+        background-color: @yellow-light;
+    }
+    &__php{
+        font-size: 14px;
+        line-height: 30px;
+        margin-left: 67px;
+        margin-top: 10px;
+    }
+}
