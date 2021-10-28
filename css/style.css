@@ -6,11 +6,13 @@
 3) Advertisement.
 4) Companies.
 5) Preferences.
-6) Impuls.
-7) Watched.
-8) Popular-categories.
-9) Social.
-10) Footer.
+6) Localization.
+7) Productivity.
+8) Edward Cooper.
+9) Software.
+10) Integration.
+11) Don't wait.
+12) Footer.
 */
 /* 1) @import
 -------------------------*/
@@ -47,6 +49,18 @@ h1 {
 h2 {
   font-size: 50px;
   line-height: 60px;
+  font-weight: 600;
+  color: #000;
+}
+h3 {
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 600;
+  color: #000;
+}
+h4 {
+  font-size: 20px;
+  line-height: 25px;
   font-weight: 600;
   color: #000;
 }
@@ -253,4 +267,344 @@ a:hover {
   line-height: 30px;
   margin-left: 67px;
   margin-top: 10px;
+}
+/*6) Localization*/
+.localization {
+  background-color: #FFF8E4;
+}
+.localization__wrap {
+  width: 1220px;
+  margin: 0 auto;
+  padding: 120px 0 72px;
+}
+.localization__title {
+  text-align: center;
+  margin-bottom: 79px;
+}
+.localization__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.localization__item {
+  margin-right: 40px;
+}
+.localization__item:nth-child(3n) {
+  margin-right: 0;
+}
+.localization .card {
+  width: 380px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 75px;
+}
+.localization .card__img {
+  margin-bottom: 26px;
+}
+.localization .card__title {
+  margin-bottom: 20px;
+}
+.localization .card__description {
+  font-size: 18px;
+  line-height: 25px;
+}
+/*7) Productivity*/
+.productivity__wrap {
+  width: 1290px;
+  margin: 0 auto;
+  padding: 154px 0 154px;
+}
+.productivity__title {
+  text-align-last: left;
+  margin-bottom: 65px;
+}
+.productivity__teams {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.productivity__item {
+  margin-right: 30px;
+}
+.productivity__item:nth-child(3n) {
+  margin-right: 0;
+}
+.productivity .team {
+  padding: 10px 0 10px;
+  text-align-last: left;
+  width: 410px;
+}
+.productivity .team__img {
+  width: 100%;
+  height: 201px;
+  margin-bottom: 49px;
+}
+.productivity .team .managers {
+  background-image: url(../img/managers.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.productivity .team .developers {
+  background-image: url(../img/developers.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.productivity .team .translators {
+  background-image: url(../img/translators.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.productivity .team__title {
+  margin-bottom: 34px;
+}
+.productivity .team__description {
+  margin-bottom: 25px;
+}
+/*8) Edward Cooper*/
+.cooper {
+  background-color: #C9E8F2;
+}
+.cooper__wrap {
+  width: 1290px;
+  margin: 0 auto;
+  padding: 53px 0 105px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.cooper__text {
+  flex-grow: 2;
+}
+.cooper__photo {
+  width: 310px;
+  height: 310px;
+  margin-left: 85px;
+}
+.cooper__blockquote {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 23px;
+}
+.cooper__cite {
+  font-size: 15px;
+  line-height: 25px;
+}
+/*9) Software*/
+.software {
+  background-color: #DABC98;
+}
+.software__wrap {
+  width: 1332px;
+  margin: 0 auto;
+  padding: 80px 0 84px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.software__img {
+  margin-right: 67px;
+}
+.software__text {
+  width: 485px;
+  margin-right: 100px;
+  font-size: 35px;
+  line-height: 50px;
+  font-weight: 600;
+}
+.software__line {
+  height: 168px;
+  width: 1px;
+  background-color: #000;
+  margin-right: 61px;
+}
+.software__soft {
+  margin-right: 50px;
+}
+.software .card {
+  padding: 10px;
+  width: 140px;
+}
+.software .card__img {
+  margin-bottom: 20px;
+}
+.software .card__stars {
+  margin-bottom: 14px;
+}
+.software .card__star {
+  display: inline-block;
+  margin-right: 6px;
+  width: 19px;
+  height: 19px;
+}
+.software .card__star:last-child {
+  margin-right: 0;
+}
+.software .card__text {
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+/*10) Integration*/
+.integration__wrap {
+  width: 1290px;
+  margin: 0 auto;
+  padding: 165px 0 162px;
+  text-align: center;
+}
+.integration__title {
+  font-size: 65px;
+  line-height: 75px;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.integration__description {
+  font-size: 25px;
+  line-height: 30px;
+  width: 540px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.integration__img {
+  margin-bottom: 32px;
+}
+.integration__button {
+  display: inline-block;
+  min-width: 193px;
+  padding: 15px;
+}
+/*11) Don't wait*/
+.dont-wait {
+  background-color: #FF9C7D;
+}
+.dont-wait__wrap {
+  width: 1290px;
+  margin: 0 auto;
+  padding: 119px 0 161px;
+  text-align: center;
+}
+.dont-wait__title {
+  width: 784px;
+  font-size: 65px;
+  line-height: 75px;
+  margin: 0 auto;
+  margin-bottom: 29px;
+}
+.dont-wait__description {
+  width: 784px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 54px;
+}
+.dont-wait__button {
+  display: inline-block;
+  min-width: 160px;
+  padding: 15px;
+  font-size: 17px;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+/*12) Footer*/
+.main-footer {
+  background-color: #EEEEEE;
+}
+.main-footer__wrap {
+  width: 1290px;
+  margin: 0 auto;
+  padding: 92px 0 43px;
+}
+.main-footer__up-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.main-footer__description-block {
+  width: 300px;
+  margin-right: 140px;
+}
+.main-footer .description-block {
+  text-align-last: left;
+}
+.main-footer .description-block__title {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.main-footer .description-block__img {
+  margin-bottom: 31px;
+}
+.main-footer .description-block__specialized {
+  margin-bottom: 11px;
+  width: 80px;
+}
+.main-footer .description-block__text {
+  margin-bottom: 15px;
+}
+.main-footer .description-block__link {
+  font-weight: 600;
+}
+.main-footer .secondary-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.main-footer .secondary-nav__menu {
+  width: 201px;
+  margin-right: 20px;
+}
+.main-footer .secondary-nav__menu:last-child {
+  margin-right: 0;
+  width: 187px;
+}
+.main-footer .secondary-nav__title {
+  margin-bottom: 21px;
+}
+.main-footer .secondary-nav__link {
+  font-size: 15px;
+  display: block;
+  line-height: 15px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+.main-footer__line {
+  margin-top: 95px;
+  width: 100%;
+  margin-bottom: 52px;
+}
+.main-footer .down-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 40px;
+}
+.main-footer .down-block__description {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.main-footer .down-block__img {
+  margin-right: 14px;
+  display: inline-block;
+}
+.main-footer .down-block__text {
+  display: inline-block;
+  width: 305px;
+  font-size: 12px;
+  line-height: 15px;
+}
+.main-footer .down-block__rights {
+  font-size: 12px;
+  line-height: 15px;
+}
+.main-footer .down-block__years,
+.main-footer .down-block__reserved {
+  display: block;
 }

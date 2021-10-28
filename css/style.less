@@ -6,11 +6,13 @@
 3) Advertisement.
 4) Companies.
 5) Preferences.
-6) Impuls.
-7) Watched.
-8) Popular-categories.
-9) Social.
-10) Footer.
+6) Localization.
+7) Productivity.
+8) Edward Cooper.
+9) Software.
+10) Integration.
+11) Don't wait.
+12) Footer.
 */
 
 /* 1) @import
@@ -69,12 +71,6 @@
         .main-paddings(129px, 0, 172px);
         .center-block();
         display: flex;
-    }
-    &__block-left{
-
-    }
-    &__block-right{
-
     }
     &__title{
         width: 539px;
@@ -178,5 +174,348 @@
         line-height: 30px;
         margin-left: 67px;
         margin-top: 10px;
+    }
+}
+/*6) Localization*/
+.localization{
+    background-color: @yellow-light;
+    &__wrap{
+        width: 1220px;
+        .center-block();
+        .main-paddings(120px, 0, 72px);
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 79px;
+    }
+    &__items{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__item{
+        margin-right: 40px;
+    }
+    &__item:nth-child(3n){
+        margin-right: 0;
+    }
+    .card{
+        width: 380px;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 75px;
+        &__img{
+            margin-bottom: 26px;
+        }
+        &__title{
+            margin-bottom: 20px;
+        }
+        &__description{
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+}
+/*7) Productivity*/
+.productivity{
+    &__wrap{
+        width: 1290px;
+        .center-block();
+        .main-paddings(154px, 0, 154px);
+    }
+    &__title{
+        text-align-last: left;
+        margin-bottom: 65px;
+    }
+    &__teams{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+    &__item{
+        margin-right: 30px;
+    }
+    &__item:nth-child(3n){
+        margin-right: 0;
+    }
+    .team{
+        padding: 10px 0 10px;
+        text-align-last: left;
+        width: 410px;
+        &__img{
+            width: 100%;
+            height: 201px;
+            margin-bottom: 49px;
+        }
+        .managers{
+            background-image: url(../img/managers.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        .developers{
+            background-image: url(../img/developers.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        .translators{
+            background-image: url(../img/translators.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+        &__title{
+            margin-bottom: 34px;
+        }
+        &__description{
+            margin-bottom: 25px;
+        }
+    }
+}
+/*8) Edward Cooper*/
+.cooper{
+    background-color: @blue;
+    &__wrap{
+        width: 1290px;
+        .center-block();
+        .main-paddings(53px, 0, 105px);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    &__text{
+        flex-grow: 2;
+    }
+    &__photo{
+        width: 310px;
+        height: 310px;
+        margin-left: 85px;
+    }
+    &__blockquote{
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 23px;
+    }
+    &__cite{
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+/*9) Software*/
+.software{
+    background-color: @brown-light;
+    &__wrap{
+        width: 1332px;
+        .center-block();
+        .main-paddings(80px, 0, 84px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    &__img{
+        margin-right: 67px;
+    }
+    &__text{
+        width: 485px;
+        margin-right: 100px;
+        font-size: 35px;
+        line-height: 50px;
+        font-weight: 600;
+    }
+    &__line{
+        height: 168px;
+        width: 1px;
+        background-color: @black;
+        margin-right: 61px;
+    }
+    &__soft{
+        margin-right: 50px;
+    }
+    .card{
+        padding: 10px;
+        width: 140px;
+        &__img{
+            margin-bottom: 20px;
+        }
+        &__stars{
+            margin-bottom: 14px;
+        }
+        &__star{
+            display: inline-block;
+            margin-right: 6px;
+            width: 19px;
+            height: 19px;
+        }
+        &__star:last-child{
+            margin-right: 0;
+        }
+        &__text{
+            font-size: 15px;
+            line-height: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+    }
+}
+/*10) Integration*/
+.integration{
+    &__wrap{
+        width: 1290px;
+        .center-block();
+        .main-paddings(165px, 0, 162px);
+        text-align: center;
+    }
+    &__title{
+        font-size: 65px;
+        line-height: 75px;
+        width: 800px;
+        .center-block();
+        text-align: center;
+    }
+    &__description{
+        font-size: 25px;
+        line-height: 30px;
+        width: 540px;
+        .center-block();
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    &__img{
+        margin-bottom: 32px;
+    }
+    &__button{
+        display: inline-block;
+        min-width: 193px;
+        padding: 15px;
+    }
+}
+/*11) Don't wait*/
+.dont-wait{
+    background-color: @orange-dark;
+    &__wrap{
+        width: 1290px;
+        .center-block();
+        .main-paddings(119px, 0, 161px);
+        text-align: center; 
+    }
+    &__title{
+        width: 784px;
+        font-size: 65px;
+        line-height: 75px;
+        .center-block();
+        margin-bottom: 29px;
+    }
+    &__description{
+        width: 784px;
+        .center-block();
+        text-align: center;
+        margin-bottom: 54px;
+    }
+    &__button{
+        display: inline-block;
+        min-width: 160px;
+        padding: 15px;
+        font-size: 17px;
+        background-color: @black;
+        border: 1px solid @black;
+        color: @white;
+    }
+}
+/*12) Footer*/
+.main-footer{
+    background-color: @gray;
+    &__wrap{
+        width: 1290px;
+        .center-block();
+        .main-paddings(92px, 0, 43px);
+    }
+    &__up-block{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    &__description-block{
+        width: 300px;
+        margin-right: 140px;
+    }
+    .description-block{
+        text-align-last: left;
+        &__title{
+            font-size: 40px;
+            line-height: 50px;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+        &__img{
+            margin-bottom: 31px;
+        }
+        &__specialized{
+            margin-bottom: 11px;
+            width: 80px;
+        }
+        &__text{
+            margin-bottom: 15px;
+        }
+        &__link{
+            font-weight: 600;
+        }
+    }
+    .secondary-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        &__menu{
+            width: 201px;
+            margin-right: 20px;
+        }
+        &__menu:last-child{
+            margin-right: 0;
+            width: 187px;
+        }
+        &__title{
+            margin-bottom: 21px;
+        }
+        &__link{
+            font-size: 15px;
+            display: block;
+            line-height: 15px;
+            padding-top: 7px;
+            padding-bottom: 8px;
+        }
+    }
+    &__line{
+        margin-top: 95px;
+        width: 100%;
+        margin-bottom: 52px;
+    }
+    .down-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 40px;
+        &__description{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        &__img{
+            margin-right: 14px;
+            display: inline-block;
+        }
+        &__text{
+            display: inline-block;
+            width: 305px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        &__rights{
+            font-size: 12px;
+            line-height: 15px;
+        }
+        &__years, &__reserved{
+            display: block;
+        }
     }
 }
