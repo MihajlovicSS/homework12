@@ -37,26 +37,65 @@
     }
     &__logo{
         margin-right: 51px;
+        display: flex;
+        align-items: center;
+    }
+    &__logo-svg{
+        transition: all 0.3s ease-out;
+    }
+    &__logo:hover > &__logo-svg{
+        fill: @orange;
+        transform: scale(1.1);
     }
     &__nav{
         margin-right: auto;
     }
     &__item{
         display: inline-block;
+        position: relative;
+    }
+    &__item::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: calc(100% - 2px);
+        border-top: 1px solid @orange;
+        border-bottom: 1px solid @orange;
+        transition: width 0.3s ease-in-out;
+    }
+    &__item::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        border-left: 1px solid @orange;
+        border-right: 1px solid @orange;
+        height: 0;
+        width: calc(100% - 2px);
+        transition: height 0.3s ease-in-out;
+    }
+      &__item:hover::before {
+        width: 100%;
+    }
+      &__item:hover::after {
+        height: 100%;
     }
     &__item:first-child, &__item:nth-child(2){
-        margin-right: 57px;
+        margin-right: 47px;
     }
     &__item:nth-child(3){
-        margin-right: 42px;
+        margin-right: 32px;
     }
-    &__item:nth-child(4){
-        margin-right: 49px;
+    &__item:nth-child(n+4){
+        margin-right: 39px;
     }
     &__link{
         display: block;
         font-size: 15px;
         line-height: 20px;
+        padding: 5px;
     }
     &__login{
         margin-left: 10px;
@@ -116,6 +155,12 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__item{
+        transition: all 0.3s ease-out;
+    }
+    &__link:hover>&__item{
+        transform: scale(1.1);
+    }
 }
 /*5) Preferences*/
 .preferences{
@@ -139,7 +184,42 @@
     }
     &__link{
         font-weight: 600;
+        display: inline-block;
+        padding: 5px;
+        position: relative;
+        transition: all 0.3s ease-in-out;
     }
+    &__link::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: calc(100% - 2px);
+        border-top: 1px solid @orange;
+        border-bottom: 1px solid @orange;
+        transition: all 0.3s ease-in-out;
+      }
+      &__link::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        border-left: 1px solid @orange;
+        border-right: 1px solid @orange;
+        height: 0;
+        width: calc(100% - 2px);
+        transition: all 0.3s ease-in-out;
+      }
+      &__link:hover {
+        color: @orange;
+      }
+      &__link:hover::before {
+        width: 100%;
+      }
+      &__link:hover::after {
+        height: 100%;
+      }
     &__title{
         margin-top: 151px;
         margin-bottom: 30px;
@@ -204,11 +284,17 @@
         text-align: center;
         padding: 10px;
         margin-bottom: 75px;
+        cursor: pointer;
         &__img{
             margin-bottom: 26px;
+            /* transition: all 2s cubic-bezier(0,1.17,.79,.89); */
         }
         &__title{
             margin-bottom: 20px;
+        }
+        &:hover > .card__img{
+            transform: rotate(3600deg);
+            transition: all 2s cubic-bezier(0,1.17,.79,.89);
         }
         &__description{
             font-size: 18px;
@@ -335,8 +421,11 @@
     }
     .card{
         padding: 10px;
-        width: 140px;
+        width: 150px;
         &__img{
+            margin-bottom: 20px;
+        }
+        &__img-svg{
             margin-bottom: 20px;
         }
         &__stars{
@@ -344,7 +433,7 @@
         }
         &__star{
             display: inline-block;
-            margin-right: 6px;
+            margin-right: 3px;
             width: 19px;
             height: 19px;
         }
@@ -421,6 +510,11 @@
         background-color: @black;
         border: 1px solid @black;
         color: @white;
+        transition: all 0.3s ease-in-out;
+    }
+    &__button:hover{
+        background-color: @orange-dark;
+        color: @black;
     }
 }
 /*12) Footer*/
@@ -460,6 +554,10 @@
         }
         &__link{
             font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+        &__link:hover{
+            color: @orange;
         }
     }
     .secondary-nav{
@@ -483,6 +581,9 @@
             line-height: 15px;
             padding-top: 7px;
             padding-bottom: 8px;
+        }
+        &__link:hover{
+            color: @orange;
         }
     }
     &__line{

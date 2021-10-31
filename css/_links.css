@@ -1,12 +1,15 @@
 /* =Links
 ---------------------------------------*/
 a {
-  /* outline: none; */
+  outline: none;
   text-decoration: none;
   color: inherit;
 }
 a:hover {
-  /* outline: none;  */
+  outline: none;
   text-decoration: none;
   cursor: pointer;
+}
+a:focus {
+  outline: 3px dotted black;
 }

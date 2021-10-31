@@ -11,6 +11,8 @@ button{
     display: block;
     background-color: @white;
     height: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 16px;
     min-width: 120px;
     font-weight: 600;
@@ -20,10 +22,18 @@ button{
     background-color: @orange;
     color: @white;
     border: 1px solid @orange;
+    transition: all 0.3s ease-in-out;
+}
+.button-orange:hover{
+    background-color: @orange-hover;
 }
 .button-white{
     background-color: @white;
     color: @black;
     border: 1px solid @black-opacity;
+    transition: all 0.3s ease-in-out;
+}
+.button-white:hover{
+    background-color: @orange-hover;
 }
 
