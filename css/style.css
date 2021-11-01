@@ -162,6 +162,7 @@ a:focus {
 .main-header__item {
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 .main-header__item::before {
   content: "";
@@ -173,6 +174,7 @@ a:focus {
   border-top: 1px solid #FF6336;
   border-bottom: 1px solid #FF6336;
   transition: width 0.3s ease-in-out;
+  cursor: pointer;
 }
 .main-header__item::after {
   content: "";
@@ -184,6 +186,7 @@ a:focus {
   height: 0;
   width: calc(100% - 2px);
   transition: height 0.3s ease-in-out;
+  cursor: pointer;
 }
 .main-header__item:hover::before {
   width: 100%;
@@ -202,6 +205,52 @@ a:focus {
   margin-right: 39px;
 }
 .main-header__link {
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 5px;
+}
+.main-header__inner-list {
+  display: none;
+  position: absolute;
+}
+.active:hover .main-header__inner-list {
+  display: block;
+}
+.main-header__inner-item {
+  position: relative;
+}
+.main-header__inner-item:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0;
+  height: calc(100% - 2px);
+  border-top: 1px solid #FF6336;
+  border-bottom: 1px solid #FF6336;
+  transition: width 0.3s ease-in-out;
+  cursor: pointer;
+}
+.main-header__inner-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  border-left: 1px solid #FF6336;
+  border-right: 1px solid #FF6336;
+  height: 0;
+  width: calc(100% - 2px);
+  transition: height 0.3s ease-in-out;
+  cursor: pointer;
+}
+.main-header__inner-item:hover::before {
+  width: 100%;
+}
+.main-header__inner-item:hover::after {
+  height: 100%;
+}
+.main-header__inner-link {
   display: block;
   font-size: 15px;
   line-height: 20px;

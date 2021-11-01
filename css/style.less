@@ -53,6 +53,7 @@
     &__item{
         display: inline-block;
         position: relative;
+        cursor: pointer;
     }
     &__item::before{
         content: "";
@@ -64,6 +65,7 @@
         border-top: 1px solid @orange;
         border-bottom: 1px solid @orange;
         transition: width 0.3s ease-in-out;
+        cursor: pointer;
     }
     &__item::after{
         content: "";
@@ -75,11 +77,12 @@
         height: 0;
         width: calc(100% - 2px);
         transition: height 0.3s ease-in-out;
+        cursor: pointer;
     }
-      &__item:hover::before {
+    &__item:hover::before {
         width: 100%;
     }
-      &__item:hover::after {
+    &__item:hover::after {
         height: 100%;
     }
     &__item:first-child, &__item:nth-child(2){
@@ -92,6 +95,52 @@
         margin-right: 39px;
     }
     &__link{
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 5px;
+    }
+    &__inner-list{
+        display: none;
+        position: absolute;
+    }
+    .active:hover &__inner-list{
+        display: block;
+    }
+    &__inner-item{
+        position: relative;
+    }
+    &__inner-item:before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: calc(100% - 2px);
+        border-top: 1px solid @orange;
+        border-bottom: 1px solid @orange;
+        transition: width 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    &__inner-item::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0px;
+        border-left: 1px solid @orange;
+        border-right: 1px solid @orange;
+        height: 0;
+        width: calc(100% - 2px);
+        transition: height 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    &__inner-item:hover::before {
+        width: 100%;
+    }
+    &__inner-item:hover::after {
+        height: 100%;
+    }
+    &__inner-link{
         display: block;
         font-size: 15px;
         line-height: 20px;
