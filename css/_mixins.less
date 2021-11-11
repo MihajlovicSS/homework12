@@ -94,47 +94,74 @@ Child is inline or inline-block, vertical-align: middle*/
 }
 } */
 .fluidFontSize(@Fmin, @Fmax, @Vmin, @Vmax){
+  font-size: @Fmin;
+  @media (min-width: @Vmin){
     @Vdif: @Vmax - @Vmin;
     @Fdif: @Fmax - @Fmin;
     font-size: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Fdif)~") +"@Fmin~")";
+  }
 }
 .fluidMarginSide(@Mmin, @Mmax, @Vmin, @Vmax, @side){
-  @Vdif: @Vmax - @Vmin;
-  @Mdif: @Mmax - @Mmin;
-  margin-@{side}: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Mdif)~") +"@Mmin~")";
+  margin-@{side}: @Mmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Mdif: @Mmax - @Mmin;
+    margin-@{side}: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Mdif)~") +"@Mmin~")";
+  }
 }
 .fluidMargin(@Mmin, @Mmax, @Vmin, @Vmax){
-  @Vdif: @Vmax - @Vmin;
-  @Mdif: @Mmax - @Mmin;
-  margin: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Mdif)~") +"@Mmin~")";
+  margin: @Mmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Mdif: @Mmax - @Mmin;
+    margin: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Mdif)~") +"@Mmin~")";
+  }
 }
 .fluidPaddingSide(@Pmin, @Pmax, @Vmin, @Vmax, @side){
-  @Vdif: @Vmax - @Vmin;
-  @Pdif: @Pmax - @Pmin;
-  padding-@{side}: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Pdif)~") +"@Pmin~")";
+  padding-@{side}: @Pmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Pdif: @Pmax - @Pmin;
+    padding-@{side}: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Pdif)~") +"@Pmin~")";
+  }
 }
 .fluidPadding(@Pmin, @Pmax, @Vmin, @Vmax){
-  @Vdif: @Vmax - @Vmin;
-  @Pdif: @Pmax - @Pmin;
-  padding: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Pdif)~") +"@Pmin~")";
+  padding: @Pmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Pdif: @Pmax - @Pmin;
+    padding: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Pdif)~") +"@Pmin~")";
+  }
 }
 .fluidWidth(@Wmin, @Wmax, @Vmin, @Vmax){
-  @Vdif: @Vmax - @Vmin;
-  @Wdif: @Wmax - @Wmin;
-  width: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Wdif)~") +"@Wmin~")";
+  width: @Wmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Wdif: @Wmax - @Wmin;
+    width: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Wdif)~") +"@Wmin~")";
+  }
 }
 .fluidWidthFlag(@Wmin, @Wmax, @Vmin, @Vmax, @flag){
-  @Vdif: @Vmax - @Vmin;
-  @Wdif: @Wmax - @Wmin;
-  @{flag}-width: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Wdif)~") +"@Wmin~")";
+  @{flag}-width: @Wmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Wdif: @Wmax - @Wmin;
+    @{flag}-width: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Wdif)~") +"@Wmin~")";
+  }
 }
 .fluidHeight(@Hmin, @Hmax, @Vmin, @Vmax){
-  @Vdif: @Vmax - @Vmin;
-  @Hdif: @Hmax - @Hmin;
-  height: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Hdif)~") +"@Hmin~")";
+  height: @Hmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @Hdif: @Hmax - @Hmin;
+    height: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Hdif)~") +"@Hmin~")";
+  }
 }
 .fluidLineHeight(@LHmin, @LHmax, @Vmin, @Vmax){
-  @Vdif: @Vmax - @Vmin;
-  @LHdif: @LHmax - @LHmin;
-  line-height: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@LHdif)~") +"@LHmin~")";
+  line-height: @LHmin;
+  @media (min-width: @Vmin){
+    @Vdif: @Vmax - @Vmin;
+    @LHdif: @LHmax - @LHmin;
+    line-height: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@LHdif)~") +"@LHmin~")";
+  }
 }

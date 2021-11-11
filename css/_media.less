@@ -43,7 +43,109 @@
 }
 
 @media only screen and (max-width : 768px) {
-
+    .main-header{
+        &__wrap{
+            justify-content: space-between;
+        }
+        &__nav{
+            display: none;
+        }
+        .sandwich{
+            margin-left: 10px;
+            display: block;
+            order: 4;
+            cursor: pointer;
+            &__list{
+                display: none;
+            }
+            &__grafics1{
+                position: relative;
+                width: 34px;
+                height: 34px;
+                background-color: @white;
+                color: @black;
+                border: 1px solid @black-opacity;
+            }
+            &__grafics2{
+                position: absolute;
+            }
+            &__grafics1::before, &__grafics2::before, &__grafics2::after{
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 1px;
+                background-color: @black-opacity;
+            }
+            &__grafics1::before{
+                top: 7px;
+                left: 6px;
+            }
+            &__grafics2::before{
+                top: -10px;
+                left: 7px;
+            }
+            &__grafics2::after{
+                top: -18px;
+                left: 7px;
+            }
+            &__list{
+                position: absolute;
+                display: block;
+                top: 49px;
+                left: 100vw;
+                background-color: @white;
+                width: 100%;
+            }
+            &__link{
+                display: block;
+                text-align: center;
+            }
+            &__item{
+                position: relative;
+                transition: background-color 0.3s ease-in-out;
+            }
+            &__item:hover{
+                background-color: lighten(@orange-hover,20%);
+            }
+            &__item::before{
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 0;
+                height: calc(100% - 2px);
+                border-top: 1px solid @orange;
+                border-bottom: 1px solid @orange;
+                transition: width 1.3s ease-in-out;
+                cursor: pointer;
+            }
+            &__item::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0px;
+                border-left: 1px solid @orange;
+                border-right: 1px solid @orange;
+                height: 0;
+                width: calc(100% - 2px);
+                transition: height 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            &__item:hover::before {
+                width: 100%;
+            }
+            &__item:hover::after {
+                height: 100%;
+            }
+        }
+        .sandwich__list{
+            transition: left 0.3s ease-in;
+        }
+        .sandwich:hover .sandwich__list{
+            left: 0;
+            transition: left 0.3s ease-in;
+        }
+    }
 }
 
 @media only screen and (max-width : 360px) {
