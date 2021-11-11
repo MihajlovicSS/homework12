@@ -1,0 +1,51 @@
+/* Media
+---------------------------------------*/
+@media only screen and (max-width : 1367px) {
+    .main-header{
+        &__wrap{
+            .fluidPaddingSide(15px, 25px, 768px, 1367px, top);
+            .fluidPaddingSide(15px, 25px, 768px, 1367px, bottom);
+        }
+        &__link{
+            .fluidFontSize(12px, 15px, 768px, 1367px);
+        }
+        &__logo{
+            .fluidMarginSide(20px, 51px, 768px, 1367px, right);
+            .fluidWidth(100px, 130px, 768px, 1367px);
+            .fluidHeight(22px, 28px, 768px, 1367px);
+        }
+        &__item:first-child, &__item:nth-child(2){
+            .fluidMarginSide(18px, 47px, 768px, 1367px, right);
+        }
+        &__item:nth-child(3){
+            .fluidMarginSide(18px, 32px, 768px, 1367px, right);
+        }
+        &__item:nth-child(n+4){
+            .fluidMarginSide(18px, 39px, 768px, 1367px, right);
+        }
+        &__inner-link{
+            .fluidFontSize(12px, 15px, 768px, 1367px);
+        }
+        &__button{
+            .fluidHeight(34px, 60px, 768px, 1367px);
+            .fluidFontSize(12px, 16px, 768px, 1367px);
+            .fluidWidthFlag(80px, 120px, 768px, 1367px, min);
+        }
+        &__login{
+            .fluidHeight(34px, 60px, 768px, 1367px);
+            .fluidFontSize(12px, 16px, 768px, 1367px);
+            .fluidWidthFlag(80px, 120px, 768px, 1367px, min);
+            .fluidLineHeight(20px, 30px, 768px, 1367px);
+            .fluidPadding(5px, 15px, 768px, 1367px);
+        }
+    }
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

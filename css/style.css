@@ -13,6 +13,7 @@
 10) Integration.
 11) Don't wait.
 12) Footer.
+13) @import media.
 */
 /* 1) @import
 -------------------------*/
@@ -38,6 +39,18 @@ Child is inline or inline-block, vertical-align: middle*/
   clear: both;
   display: table;
 }
+/* .fluidFontSize(@Fmin, @Fmax, @Vmin, @Vmax){
+  font-size: @Fmin;
+  @media (min-width: @Vmin){
+      @Vdif: @Vmax - @Vmin;
+      @Fdif: @Fmax - @Fmin;
+  font-size: ~"calc((100vw -"@Vmin~")/("unit(@Vdif)~")*("unit(@Fdif)~") +"@Fmin~")";
+  //calc( (100vw - @Vmin)/(@Vmax - @Vmin) * (@Fmax - @Fmin) + @Fmin)
+  }
+  @media (min-width: @Vmax) {
+      font-size: @Fmax;
+}
+} */
 /* Headings
 ---------------------------------------*/
 h1 {
@@ -137,14 +150,16 @@ a:focus {
 }
 /*2) Header*/
 .main-header__wrap {
-  width: 1338px;
+  max-width: 1368px;
   margin: 0 auto;
-  padding: 25px 0 25px;
+  padding: 25px 15px 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .main-header__logo {
+  width: 130px;
+  height: 28px;
   margin-right: 51px;
   display: flex;
   align-items: center;
@@ -269,20 +284,32 @@ a:focus {
   margin-left: 10px;
   padding: 15px;
   text-align: center;
+  line-height: 28px;
 }
 /*3) Advertisement*/
 .advertisement__wrap {
-  width: 1290px;
-  padding: 129px 0 172px;
+  max-width: 1320px;
+  padding: 129px 15px 172px;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.advertisement__block-left {
+  flex: 0 1 42%;
+}
+.advertisement__block-right {
+  flex: 0 1 58%;
+}
+.advertisement__block-right img {
+  width: 100%;
 }
 .advertisement__title {
-  width: 539px;
+  /* width: 539px; */
   margin-bottom: 51px;
 }
 .advertisement__description {
-  width: 520px;
+  /* width: 520px; */
   font-size: 25px;
   line-height: 35px;
   margin-bottom: 51px;
@@ -780,3 +807,46 @@ a:focus {
 .main-footer .down-block__reserved {
   display: block;
 }
+/*13) @import media.*/
+/* Media
+---------------------------------------*/
+@media only screen and (max-width: 1367px) {
+  .main-header__wrap {
+    padding-top: calc((100vw - 768px )/( 599 )*( 10 ) + 15px );
+    padding-bottom: calc((100vw - 768px )/( 599 )*( 10 ) + 15px );
+  }
+  .main-header__link {
+    font-size: calc((100vw - 768px )/( 599 )*( 3 ) + 12px );
+  }
+  .main-header__logo {
+    margin-right: calc((100vw - 768px )/( 599 )*( 31 ) + 20px );
+    width: calc((100vw - 768px )/( 599 )*( 30 ) + 100px );
+    height: calc((100vw - 768px )/( 599 )*( 6 ) + 22px );
+  }
+  .main-header__item:first-child,
+  .main-header__item:nth-child(2) {
+    margin-right: calc((100vw - 768px )/( 599 )*( 29 ) + 18px );
+  }
+  .main-header__item:nth-child(3) {
+    margin-right: calc((100vw - 768px )/( 599 )*( 14 ) + 18px );
+  }
+  .main-header__item:nth-child(n+4) {
+    margin-right: calc((100vw - 768px )/( 599 )*( 21 ) + 18px );
+  }
+  .main-header__inner-link {
+    font-size: calc((100vw - 768px )/( 599 )*( 3 ) + 12px );
+  }
+  .main-header__button {
+    height: calc((100vw - 768px )/( 599 )*( 26 ) + 34px );
+    font-size: calc((100vw - 768px )/( 599 )*( 4 ) + 12px );
+    min-width: calc((100vw - 768px )/( 599 )*( 40 ) + 80px );
+  }
+  .main-header__login {
+    height: calc((100vw - 768px )/( 599 )*( 26 ) + 34px );
+    font-size: calc((100vw - 768px )/( 599 )*( 4 ) + 12px );
+    min-width: calc((100vw - 768px )/( 599 )*( 40 ) + 80px );
+    line-height: calc((100vw - 768px )/( 599 )*( 10 ) + 20px );
+    padding: calc((100vw - 768px )/( 599 )*( 10 ) + 5px );
+  }
+}
+/*# sourceMappingURL=./style.css.map */
