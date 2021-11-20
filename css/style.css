@@ -89,7 +89,6 @@ body {
   font-weight: 400;
   color: #000;
   background-color: #fff;
-  overflow-x: hidden;
 }
 /* =Buttons
 ---------------------------------------*/
@@ -103,7 +102,6 @@ button {
 .button {
   display: block;
   background-color: #fff;
-  height: 60px;
   padding-left: 5px;
   padding-right: 5px;
   font-size: 16px;
@@ -150,6 +148,9 @@ a:focus {
   outline: 2px dotted #FF6336;
 }
 /*2) Header*/
+.main-header {
+  border-bottom: 1px solid #EEEEEE;
+}
 .main-header__wrap {
   max-width: 1368px;
   margin: 0 auto;
@@ -288,7 +289,11 @@ a:focus {
   margin-left: 10px;
   padding: 15px;
   text-align: center;
-  line-height: 28px;
+  line-height: 12px;
+  height: 45px;
+}
+.main-header__button {
+  height: 45px;
 }
 /*3) Advertisement*/
 .advertisement__wrap {
@@ -318,8 +323,11 @@ a:focus {
   line-height: 35px;
   margin-bottom: 51px;
 }
+.advertisement__links {
+  display: flex;
+  justify-content: left;
+}
 .advertisement__button {
-  display: inline-block;
   min-width: 160px;
   padding: 16px;
 }
@@ -357,6 +365,30 @@ a:focus {
 }
 .companies__link:hover > .companies__item {
   transform: scale(1.1);
+}
+.companies .specialized {
+  width: 138px;
+  height: 53px;
+}
+.companies .virgin {
+  width: 72px;
+  height: 54px;
+}
+.companies .tidal {
+  width: 150px;
+  height: 25px;
+}
+.companies .revolut {
+  width: 112px;
+  height: 25px;
+}
+.companies .yelp {
+  width: 107px;
+  height: 53px;
+}
+.companies .daimler {
+  width: 150px;
+  height: 19px;
 }
 /*5) Preferences*/
 .preferences__wrap {
@@ -527,23 +559,21 @@ a:focus {
   height: 201px;
   margin-bottom: 49px;
 }
-.productivity .team .managers {
-  background-image: url(../img/managers.png);
+.productivity .team .managers,
+.productivity .team .developers,
+.productivity .team .translators {
   background-position: left center;
   background-repeat: no-repeat;
   background-size: auto;
+}
+.productivity .team .managers {
+  background-image: url(../img/managers.png);
 }
 .productivity .team .developers {
   background-image: url(../img/developers.png);
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: auto;
 }
 .productivity .team .translators {
   background-image: url(../img/translators.png);
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: auto;
 }
 .productivity .team__title {
   margin-bottom: 34px;
@@ -579,6 +609,10 @@ a:focus {
 .cooper__cite {
   font-size: 15px;
   line-height: 25px;
+}
+.cooper__svg {
+  width: 112px;
+  height: 25px;
 }
 /*9) Software*/
 .software {
@@ -621,6 +655,10 @@ a:focus {
 }
 .software .card__img-svg {
   margin-bottom: 20px;
+}
+.software .card .g2 {
+  width: 35px;
+  height: 36px;
 }
 .software .card .capterra {
   width: 150px;
@@ -744,6 +782,7 @@ a:focus {
 .main-footer .description-block__specialized {
   margin-bottom: 11px;
   width: 80px;
+  height: 32px;
 }
 .main-footer .description-block__text {
   margin-bottom: 15px;
@@ -800,6 +839,8 @@ a:focus {
 .main-footer .down-block__img {
   margin-right: 14px;
   display: inline-block;
+  width: 90px;
+  height: 21px;
 }
 .main-footer .down-block__text {
   display: inline-block;
@@ -873,6 +914,9 @@ a:focus {
   .advertisement__description {
     text-align: center;
     margin-bottom: 15px;
+  }
+  .advertisement__links {
+    justify-content: center;
   }
   .advertisement__links {
     text-align: center;
@@ -1021,7 +1065,7 @@ a:focus {
     margin-left: 10px;
     height: auto;
   }
-  .cooper__photo img {
+  .cooper__photo-img {
     width: 180px;
     height: 180px;
   }
@@ -1239,12 +1283,12 @@ a:focus {
   }
 }
 @media only screen and (max-width: 1367px) and (min-width: 768px) {
-  .cooper__photo img {
+  .cooper__photo-img {
     width: calc((100vw - 768px )/( 599 )*( 130 ) + 180px );
   }
 }
 @media only screen and (max-width: 1367px) and (min-width: 768px) {
-  .cooper__photo img {
+  .cooper__photo-img {
     height: calc((100vw - 768px )/( 599 )*( 130 ) + 180px );
   }
 }
@@ -1320,7 +1364,7 @@ a:focus {
     left: 7px;
   }
   .main-header .sandwich__list {
-    position: absolute;
+    position: fixed;
     display: block;
     top: 49px;
     left: 100vw;
@@ -1495,7 +1539,7 @@ a:focus {
     order: -1;
     margin-bottom: 10px;
   }
-  .cooper__photo img {
+  .cooper__photo-img {
     width: 310px;
     height: 310px;
   }
@@ -1606,6 +1650,7 @@ a:focus {
   }
   .main-footer .down-block__description {
     margin-bottom: 5px;
+    flex-wrap: wrap;
   }
   .main-footer .down-block__years {
     text-align: center;

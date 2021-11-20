@@ -29,6 +29,7 @@
 
 /*2) Header*/
 .main-header{
+    border-bottom: 1px solid @gray;
     &__wrap{
         max-width: 1368px;
         .center-block();
@@ -166,7 +167,11 @@
         margin-left: 10px;
         padding: 15px;
         text-align: center;
-        line-height: 28px;
+        line-height: 12px;
+        height: 45px;
+    }
+    &__button{
+        height: 45px;
     }
 }
 /*3) Advertisement*/
@@ -198,8 +203,11 @@
         line-height: 35px;
         margin-bottom: 51px;
     }
+    &__links{
+        display: flex;
+        justify-content: left;
+    }
     &__button{
-        display: inline-block;
         min-width: 160px;
         padding: 16px;
     }
@@ -237,6 +245,30 @@
     }
     &__link:hover>&__item{
         transform: scale(1.1);
+    }
+    .specialized{
+        width: 138px;
+        height: 53px;
+    }
+    .virgin{
+        width: 72px;
+        height: 54px;
+    }
+    .tidal{
+        width: 150px;
+        height: 25px;
+    }
+    .revolut{
+        width: 112px;
+        height: 25px;
+    }
+    .yelp{
+        width: 107px;
+        height: 53px;
+    }
+    .daimler{
+        width: 150px;
+        height: 19px;
     }
 }
 /*5) Preferences*/
@@ -410,23 +442,19 @@
             height: 201px;
             margin-bottom: 49px;
         }
-        .managers{
-            background-image: url(../img/managers.png);
+        .managers, .developers, .translators{
             background-position: left center;
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: auto;            
+        }
+        .managers{
+            background-image: url(../img/managers.png);
         }
         .developers{
             background-image: url(../img/developers.png);
-            background-position: left center;
-            background-repeat: no-repeat;
-            background-size: auto;
         }
         .translators{
             background-image: url(../img/translators.png);
-            background-position: left center;
-            background-repeat: no-repeat;
-            background-size: auto;
         }
         &__title{
             margin-bottom: 34px;
@@ -463,6 +491,10 @@
     &__cite{
         font-size: 15px;
         line-height: 25px;
+    }
+    &__svg{
+        width: 112px;
+        height: 25px;
     }
 }
 /*9) Software*/
@@ -504,6 +536,10 @@
         }
         &__img-svg{
             margin-bottom: 20px;
+        }
+        .g2{
+            width: 35px;
+            height: 36px;
         }
         .capterra{
             width: 150px;
@@ -629,6 +665,7 @@
         &__specialized{
             margin-bottom: 11px;
             width: 80px;
+            height: 32px;
         }
         &__text{
             margin-bottom: 15px;
@@ -685,6 +722,8 @@
         &__img{
             margin-right: 14px;
             display: inline-block;
+            width: 90px;
+            height: 21px;
         }
         &__text{
             display: inline-block;
